@@ -1,6 +1,9 @@
 #### Resource: unison_share #################################################
 #
 
+actions :share, :unshare
+default_action :share
+
 attribute :cookbook,
   :kind_of => String,
   :default => 'unison'
@@ -16,10 +19,10 @@ attribute :root,
 
 attribute :user,
   :kind_of => String,
-  :deafult => default[:unison][:user]
+  :default => node[:unison][:user]
 
 attribute :protocol,
   :kind_of => String,
-  :deafult => "ssh"
+  :default => "ssh"
 
 # EOF
